@@ -420,7 +420,7 @@
       line-height: 1.6;
     }
 
-    /* ─── How It Works Section ─── */
+    /* ─── What to Expect Section ─── */
     .how-it-works-section {
       background: var(--sage-pale);
       padding: 56px 40px;
@@ -503,7 +503,7 @@
     .about-us-page {
       background: var(--cream);
       padding: 80px 40px;
-      height: calc(100vh - var(--header-height));
+      min-height: calc(100vh - var(--header-height));
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
@@ -530,10 +530,10 @@
     }
     .about-content { max-width: 960px; width: 100%; }
 
-    /* Portrait grid */
+    /* Portrait grid — now 3 columns for 6 people */
     .portrait-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
     .portrait-card {
@@ -682,6 +682,7 @@
       .nav-link { padding: 7px 12px; font-size: .82rem; }
       .buddy-container { gap: 20px; }
       .how-band { gap: 40px; }
+      .portrait-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
     }
   </style>
 </head>
@@ -698,7 +699,7 @@
     <nav class="nav-bar">
       <a href="#home"         class="nav-link">Home</a>
       <a href="#why-join"     class="nav-link">Why Join</a>
-      <a href="#how-it-works" class="nav-link">How It Works</a>
+      <a href="#how-it-works" class="nav-link">What to Expect</a>
       <a href="#about-us"     class="nav-link">About Us</a>
     </nav>
 
@@ -712,7 +713,7 @@
   <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
     <a href="#home"         class="nav-link">Home</a>
     <a href="#why-join"     class="nav-link">Why Join</a>
-    <a href="#how-it-works" class="nav-link">How It Works</a>
+    <a href="#how-it-works" class="nav-link">What to Expect</a>
     <a href="#about-us"     class="nav-link">About Us</a>
   </nav>
 
@@ -786,11 +787,11 @@
       <p class="final-line reveal"><strong><em>PhD<em>buddy</em></em></strong> is about community, empathy, and making the PhD experience kinder for everyone.</p>
     </section>
 
-    <!-- How It Works Section -->
+    <!-- What to Expect Section -->
     <section id="how-it-works" class="how-it-works-section">
       <div class="how-band">
         <div class="how-text reveal">
-          <h3>How It Works</h3>
+          <h3>What to Expect</h3>
           <p>We match PhD students with post-graduates from our team.</p>
           <p>After you sign up, three post-graduate buddies are made available for you to connect with – you can get to know all of them and have conversations with whoever you choose or is available.</p>
           <p>We define the structure of the conversation together based on your needs and goals.</p>
@@ -855,6 +856,28 @@
               </a>
             </div>
             <p class="portrait-name">Kevin</p>
+            <p class="portrait-role">Post-Graduate Buddy</p>
+          </div>
+
+          <div class="portrait-card reveal">
+            <div class="portrait-img-wrapper">
+              <img src="Olivia.jpg" alt="Olivia" class="portrait-img" />
+              <a href="https://www.linkedin.com/in/olivia-pfeil-gardiner-065218270/" target="_blank" class="portrait-social">
+                <img src="linkedin-icon.png" alt="LinkedIn" />
+              </a>
+            </div>
+            <p class="portrait-name">Olivia</p>
+            <p class="portrait-role">Post-Graduate Buddy</p>
+          </div>
+
+          <div class="portrait-card reveal">
+            <div class="portrait-img-wrapper">
+              <img src="laura.jpg" alt="Laura" class="portrait-img" />
+              <a href="https://www.linkedin.com/in/laura-sabou-815457115/" target="_blank" class="portrait-social">
+                <img src="linkedin-icon.png" alt="LinkedIn" />
+              </a>
+            </div>
+            <p class="portrait-name">Laura</p>
             <p class="portrait-role">Post-Graduate Buddy</p>
           </div>
 
