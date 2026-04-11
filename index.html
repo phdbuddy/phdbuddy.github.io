@@ -530,12 +530,17 @@
     }
     .about-content { max-width: 960px; width: 100%; }
 
-    /* Portrait grid — now 3 columns for 6 people */
+    /* Portrait grid — now 3 columns for 5 people (last row: 2 centered) */
     .portrait-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
+    /* Center the last row of 2 */
+    .portrait-grid .portrait-card:nth-last-child(2):nth-child(3n+1) {
+      grid-column: 1 / 2;
+    }
+
     .portrait-card {
       display: flex;
       flex-direction: column;
@@ -577,7 +582,7 @@
       font-size: 1.05rem;
       font-weight: 600;
       color: var(--ink);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
     .portrait-role {
       font-size: .78rem;
@@ -585,6 +590,26 @@
       letter-spacing: .08em;
       text-transform: uppercase;
       color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .portrait-bio {
+      font-size: .82rem;
+      line-height: 1.6;
+      color: var(--brown-soft);
+      text-align: center;
+      max-width: 240px;
+    }
+
+    /* Last row centering for 5-person grid */
+    .portrait-grid-last-row {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 0;
+    }
+    .portrait-grid-last-row .portrait-card {
+      width: calc((960px - 48px) / 3);
+      max-width: 280px;
     }
 
     /* ─── Floating Sign-Up Bar ─── */
@@ -660,8 +685,11 @@
       .how-it-works-section { padding: 48px 20px; height: auto; min-height: calc(100vh - var(--header-height)); }
       .about-us-page { padding: 60px 20px; height: auto; min-height: calc(100vh - var(--header-height)); align-items: center; }
       .portrait-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .portrait-grid-last-row { gap: 16px; }
+      .portrait-grid-last-row .portrait-card { width: calc(50vw - 28px); max-width: none; }
       .portrait-name { font-size: .95rem; }
       .portrait-role { font-size: .72rem; }
+      .portrait-bio { font-size: .78rem; max-width: 100%; }
 
       .home-text h1 { font-size: 1.75rem; letter-spacing: -.015em; }
       .home-lead { font-size: .95rem; }
@@ -813,7 +841,8 @@
         <h2 class="reveal">About Us</h2>
         <p class="section-label reveal">Organizing Team &amp; Post-Graduate Buddies</p>
 
-        <div class="portrait-grid">
+        <!-- Row 1: Jona, Alina, Nadine -->
+        <div class="portrait-grid" style="margin-bottom: 24px;">
 
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
@@ -824,6 +853,7 @@
             </div>
             <p class="portrait-name">Jona</p>
             <p class="portrait-role">Organizer</p>
+            <p class="portrait-bio">Hi, I'm <strong>Jona</strong> and I want to be a writer when I grow up. I could chat to you about music, movies, existential doom or just tell you stories about my cat. Happy to meet you!</p>
           </div>
 
           <div class="portrait-card reveal">
@@ -835,6 +865,7 @@
             </div>
             <p class="portrait-name">Alina</p>
             <p class="portrait-role">Organizer</p>
+            <p class="portrait-bio">Hello, I'm <strong>Alina</strong>. I find joy in playing in an orchestra, getting lost in books, and water — on it through rowing and in it through scuba diving. I'm here to offer the kind of non-academic support I wish I'd had during my PhD.</p>
           </div>
 
           <div class="portrait-card reveal">
@@ -846,18 +877,13 @@
             </div>
             <p class="portrait-name">Nadine</p>
             <p class="portrait-role">Post-Graduate Buddy</p>
+            <p class="portrait-bio">Hey, I am <strong>Nadine</strong>. I am fueled by music, curiosity and new experiences, in and out of work. I want to offer you a safe space where you can talk openly, feel heard and explore ideas together.</p>
           </div>
 
-          <div class="portrait-card reveal">
-            <div class="portrait-img-wrapper">
-              <img src="kevin.jpg" alt="Kevin" class="portrait-img" />
-              <a href="https://www.instagram.com/nzumbiart?igsh=MzBlaXZxdHRpeGw1" target="_blank" class="portrait-social">
-                <img src="instagram.png" alt="Instagram" />
-              </a>
-            </div>
-            <p class="portrait-name">Kevin</p>
-            <p class="portrait-role">Post-Graduate Buddy</p>
-          </div>
+        </div>
+
+        <!-- Row 2: Olivia, Laura — centered -->
+        <div class="portrait-grid-last-row">
 
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
@@ -868,6 +894,7 @@
             </div>
             <p class="portrait-name">Olivia</p>
             <p class="portrait-role">Post-Graduate Buddy</p>
+            <p class="portrait-bio">Hey there, I'm <strong>Olivia</strong>. Outside of science, I enjoy all things circus, languages, home-fermenting and winter swimming. While PhDs tend to be all-consuming, I believe in the importance of keeping some non-science in our lives.</p>
           </div>
 
           <div class="portrait-card reveal">
@@ -879,9 +906,11 @@
             </div>
             <p class="portrait-name">Laura</p>
             <p class="portrait-role">Post-Graduate Buddy</p>
+            <p class="portrait-bio">I'm <strong>Laura</strong> 👋 I know first hand how hard doing a PhD can be, so I am very happy to now be a listening ear for whoever needs it ☺️</p>
           </div>
 
         </div>
+
       </div>
     </section>
 
