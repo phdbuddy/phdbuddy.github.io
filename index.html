@@ -530,15 +530,11 @@
     }
     .about-content { max-width: 960px; width: 100%; }
 
-    /* Portrait grid — now 3 columns for 5 people (last row: 2 centered) */
+    /* Portrait grid — 4 columns for row 1 */
     .portrait-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 24px;
-    }
-    /* Center the last row of 2 */
-    .portrait-grid .portrait-card:nth-last-child(2):nth-child(3n+1) {
-      grid-column: 1 / 2;
     }
 
     .portrait-card {
@@ -600,7 +596,7 @@
       max-width: 240px;
     }
 
-    /* Last row centering for 5-person grid */
+    /* Last row: 3 cards centered, sized to match 4-col grid width */
     .portrait-grid-last-row {
       display: flex;
       justify-content: center;
@@ -608,7 +604,7 @@
       margin-top: 0;
     }
     .portrait-grid-last-row .portrait-card {
-      width: calc((960px - 48px) / 3);
+      width: calc((960px - 72px) / 4);
       max-width: 280px;
     }
 
@@ -840,24 +836,24 @@
       <div class="about-content">
         <h2 class="reveal">About Us</h2>
         <p class="section-label reveal">Organizing Team &amp; Post-Graduate Buddies</p>
- 
-        <!-- Row 1: Jona, Alina, Nadine -->
+
+        <!-- Row 1: Jona, Alina, Nadine, Luisa (4 columns) -->
         <div class="portrait-grid" style="margin-bottom: 24px;">
- 
+
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
-              <img src="jona.jpg" alt="Jona" class="portrait-img" />
+              <img src="profile_photos/jona.jpg" alt="Jona" class="portrait-img" />
               <a href="https://www.linkedin.com/in/jona-rada-399b042a3/" target="_blank" class="portrait-social">
                 <img src="linkedin-icon.png" alt="LinkedIn" />
               </a>
             </div>
-            <p class="portrait-role">Organizer</p>
+            <p class="portrait-role">Post-Graduate Buddy</p>
             <p class="portrait-bio">Hi, I'm <strong>Jona</strong> and I want to be a writer when I grow up. I could chat to you about music, movies, existential doom or just tell you stories about my cat. Happy to meet you!</p>
           </div>
- 
+
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
-              <img src="alina.jpg" alt="Alina" class="portrait-img" />
+              <img src="profile_photos/alina.jpg" alt="Alina" class="portrait-img" />
               <a href="https://www.linkedin.com/in/alina-maria-ritz-798747293/" target="_blank" class="portrait-social">
                 <img src="linkedin-icon.png" alt="LinkedIn" />
               </a>
@@ -865,37 +861,37 @@
             <p class="portrait-role">Organizer</p>
             <p class="portrait-bio">Hello, I'm <strong>Alina</strong>. I find joy in playing in an orchestra, getting lost in books, and water — on it through rowing and in it through scuba diving. I'm here hoping to offer the kind of non-academic support I wish I'd had during my PhD.</p>
           </div>
- 
+
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
-              <img src="nadine.jpg" alt="Nadine" class="portrait-img" />
+              <img src="profile_photos/nadine.jpg" alt="Nadine" class="portrait-img" />
               <a href="https://www.linkedin.com/in/nadine-tuechler/" target="_blank" class="portrait-social">
                 <img src="linkedin-icon.png" alt="LinkedIn" />
               </a>
             </div>
-            <p class="portrait-role">Post-Graduate Buddy</p>
+            <p class="portrait-role">Organizer</p>
             <p class="portrait-bio">Hey, I am <strong>Nadine</strong>. I am fueled by music, curiosity and new experiences, in and out of work. I want to offer you a safe space where you can talk openly, feel heard and explore ideas together.</p>
           </div>
- 
-        </div>
- 
-        <!-- Row 2: Olivia, Laura, Nzumbi (Kevin) -->
-        <div class="portrait-grid-last-row">
- 
+
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
-              <img src="Olivia.jpg" alt="Olivia" class="portrait-img" />
-              <a href="https://www.linkedin.com/in/olivia-pfeil-gardiner-065218270/" target="_blank" class="portrait-social">
+              <img src="profile_photos/Luisa.jpg" alt="Luisa" class="portrait-img" />
+              <a href="https://www.linkedin.com/in/msluisaabreu/" target="_blank" class="portrait-social">
                 <img src="linkedin-icon.png" alt="LinkedIn" />
               </a>
             </div>
             <p class="portrait-role">Post-Graduate Buddy</p>
-            <p class="portrait-bio">Hey there, I'm <strong>Olivia</strong>. Outside of science, I enjoy all things circus, languages, home-fermenting and winter swimming. While PhDs tend to be all-consuming, I believe in the importance of keeping some non-science in our lives.</p>
+            <p class="portrait-bio">Hey, I'm <strong>Luisa</strong>! Apart from science, I enjoy crafting and cooking. The PhD journey can be challenging, so I'm here to hear you whether you want to talk about science, pop culture or random thoughts.</p>
           </div>
- 
+
+        </div>
+
+        <!-- Row 2: Laura, Nzumbi (Kevin), Silvija — 3 centered -->
+        <div class="portrait-grid-last-row">
+
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
-              <img src="laura.jpg" alt="Laura" class="portrait-img" />
+              <img src="profile_photos/laura.jpg" alt="Laura" class="portrait-img" />
               <a href="https://www.linkedin.com/in/laura-sabou-815457115/" target="_blank" class="portrait-social">
                 <img src="linkedin-icon.png" alt="LinkedIn" />
               </a>
@@ -903,10 +899,10 @@
             <p class="portrait-role">Post-Graduate Buddy</p>
             <p class="portrait-bio">I'm <strong>Laura</strong> 👋 I know first hand how hard doing a PhD can be, so I am very happy to now be a listening ear for whoever needs it ☺️</p>
           </div>
- 
+
           <div class="portrait-card reveal">
             <div class="portrait-img-wrapper">
-              <img src="kevin.jpg" alt="Kevin" class="portrait-img" />
+              <img src="profile_photos/kevin.jpg" alt="Kevin" class="portrait-img" />
               <a href="https://www.instagram.com/nzumbiart?igsh=MzBlaXZxdHRpeGw1" target="_blank" class="portrait-social">
                 <img src="instagram.png" alt="Instagram" />
               </a>
@@ -914,12 +910,23 @@
             <p class="portrait-role">Post-Graduate Buddy</p>
             <p class="portrait-bio">My name is <strong>Nzumbi</strong>, and I'd be happy to lend an ear and listen, if you'd like to share. I happen to like art 🎨👨🏾‍🎨</p>
           </div>
- 
+
+          <div class="portrait-card reveal">
+            <div class="portrait-img-wrapper">
+              <img src="profile_photos/Silvija.jpg" alt="Silvija" class="portrait-img" />
+              <a href="https://www.linkedin.com/in/silvija-svambaryte/" target="_blank" class="portrait-social">
+                <img src="linkedin-icon.png" alt="LinkedIn" />
+              </a>
+            </div>
+            <p class="portrait-role">Post-Graduate Buddy</p>
+            <p class="portrait-bio">Hi, I'm <strong>Silvija</strong>. I enjoy getting lost in books and movies, watching football, staying active, and cuddling any animal that allows it. I hope to be someone you can talk to openly – whether about your PhD or just life in general.</p>
+          </div>
+
         </div>
- 
+
       </div>
     </section>
- 
+
   </main>
 
   <script>
